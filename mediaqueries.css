@@ -1,0 +1,13 @@
+/* this is where if the display is is less than 1200 px
+then the desktop menu wont show up and it will change it to
+hamburger menu*/
+
+@media screen and (max-width: 1200px){
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+
+}
