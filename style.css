@@ -449,25 +449,25 @@ article .icon {
 .contact-info-upper-container {
     display: flex;
     justify-content: center;
+    background-color: #ffcccb;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
 .contact-info-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
 }
 
-.contact-icon {
+.contact-info-container img {
     height: 2.5rem;
 }
 
-.email-icon {
-    height: 2.5rem;
+.contact-info-container p {
+    margin: 0;
+    color: #333;
 }
 
 /* footer */
