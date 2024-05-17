@@ -13,15 +13,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install Dependencies
+      - name: Deploy Changes
         run: |
-          # Add commands to install any dependencies required for your deployment
+          # Ensure the target directory exists
+          sudo mkdir -p /var/www/html/website2
 
-      - name: Build and Deploy
-        run: |
-          # Add commands to build and deploy your website
-          # For example:
-          cd /var/www/html/website2
-          git reset --hard
-          git pull origin main --force
-          # Add any additional deployment commands here
+          # Set the correct permissions
+          sudo chown -R $USER:$USER /var/www/html/website2
+
+          # Copy the contents of the repository to the target directory
+          sudo cp -r * /var/www/html/website2
+
+          # Set the correct permissions for the files
+          sudo chmod -R 755 /var/www/html/website2
+
+          # Print a success message
+          echo "Deployment to /var/www/html/website2 completed successfully."
+
