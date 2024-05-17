@@ -1,0 +1,27 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          # Add commands to install any dependencies required for your deployment
+
+      - name: Build and Deploy
+        run: |
+          # Add commands to build and deploy your website
+          # For example:
+          cd /var/www/html/website2
+          git reset --hard
+          git pull origin main --force
+          # Add any additional deployment commands here
